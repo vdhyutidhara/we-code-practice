@@ -1,5 +1,5 @@
+// CWC -> Custom Widget Code
 webengage.survey.onSubmit(function (data) {
-    // CWC -> Custom Widget Code
     if (data.surveyId === "~162i8n7") {    // Here, survey id is survey's VARIATION ID
         var fName;
         var lName;
