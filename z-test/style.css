@@ -1,0 +1,8 @@
+#webklipper-publisher-widget-container-content-expand-collapse > div {
+  background-image: none !important;
+}
+
+#webklipper-publisher-widget-container-content-expand-collapse {
+  background-image: url("https://i.imgur.com/zmtCHsH.jpeg") !important;
+  background-size: cover;
+}
