@@ -1,6 +1,202 @@
-<div class="code">
-  USE CODE - 
-  <strong>
-      {{user["custom"]["coupon_code"] if user["custom"]["coupon_code"] else 'ATREPEATUSERSFALLBACK2022'}}
-  </strong>
+<style>
+  .wrapper {
+    border-color: transparent;
+    background-color: transparent;
+  }
+  #webklipper-publisher-widget-container-notification-container
+    > div
+    > div
+    > div:nth-child(2)
+    > div
+    > ul
+    > li
+    > span:nth-child(3) {
+    margin-left: 2px;
+  }
+  .paymentHeader {
+    width: 100% !important;
+    height: 33px !important;
+  }
+  .cl_sticky {
+    display: flex;
+    /*background-color: rgba(237, 244, 255, 1);
+     background-color: #ececec;*/
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    /* background-image: linear-gradient(to right, #e30303, #ff8b00, #feed00, #008026, #004dff, #750686);*/
+    position: relative;
+  }
+
+  .couponText {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-family: arial, helvetica, sans-serif;
+    padding-left: 10px;
+  }
+
+  .couponBTN {
+    background-color: rgb(0, 76, 127);
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-family: arial, helvetica, sans-serif;
+    padding: 5px 10px;
+    margin: 4px;
+    text-align: center;
+  }
+
+  .couponBTN a {
+    color: #fff;
+  }
+
+  #timerFunc {
+    display: none;
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+
+  .daysBox,
+  .hoursBox,
+  .minsBox,
+  .secsBox {
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  #daysBox,
+  #hoursBox,
+  #minsBox,
+  #secsBox {
+    font-weight: bold;
+    margin-left: 5px;
+    display: inline-block;
+  }
+
+  .cl_sticky {
+    overflow: hidden;
+    flex-direction: column;
+    height: 33px;
+    /*background-color: aliceblue;*/
+    background-color: transparent;
+  }
+
+  .timer___ {
+    /* padding-bottom: 5px; */
+    display: block;
+    background-color: rgba(237, 244, 255, 1);
+    text-align: center;
+  }
+
+  .abs_sticky_ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .abs_sticky_ {
+    top: -100px;
+    transform: translateY(-50%);
+  }
+
+  .abs_sticky_.abs_sticky_1 {
+    top: 42%;
+  }
+
+  .offer_ {
+    margin: 0;
+    padding: 0;
+    margin-right: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-family: arial, helvetica, sans-serif;
+  }
+  @media (max-width: 414px) {
+    .couponText {
+      font-size: 2.8vw;
+    }
+
+    .couponBTN {
+      font-size: 2.8vw;
+    }
+  }
+  .container1 {
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainMenu {
+    display: flex;
+    align-items: center;
+  }
+  .shubh {
+    margin-right: 20px;
+    margin-left: 5px;
+    background-color: #5eb9cd;
+    color: #ffffff;
+    padding: 4px;
+    font-size: 11px;
+  }
+  .mainMenu li {
+    list-style: none;
+    margin: 0px 10px;
+    background-color: #5eb9cd;
+    color: #ffffff;
+    padding: 5px;
+    font-size: 11px;
+  }
+  .close,
+  .maximize,
+  .minimize {
+    width: 20px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: right;
+  }
+  h1 {
+    color: #010000;
+  }
+
+  @media screen and (max-width: 1060px) {
+    .container1 {
+      font-size: 10px;
+      height: auto;
+      width: auto;
+      justify-content: center;
+      margin-bottom: 11px;
+    }
+    h1 {
+      font-size: 1.2rem;
+      padding: 0;
+    }
+    .mainMenu li {
+      font-size: 10px;
+      margin: 2px;
+      /*padding: 5px;*/
+    }
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+</style>
+
+<div class="cl_sticky">
+  <div class="abs_sticky_">
+    <a href="https://vdhyutidhara.vercel.app/#onsitetimer">
+      <div class="container1">
+        <div>Get Free Gold Coins on the purchase of 25K & above<sup>*</sup></div>
+        <div class="shubh">SHUBH</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="abs_sticky_ abs_sticky_1">
+    <div class="container1">
+      <div>EXTRA 5% Instant Discount on Jewellery with Ships Fast tag<sup>*</sup></div>
+    </div>
+  </div>
 </div>

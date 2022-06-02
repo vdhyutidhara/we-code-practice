@@ -1,0 +1,18 @@
+{
+  "webengage.licenseCode": "~99198a06",
+  "webengage.widgetVersion": "6.0",
+  "webengage.isGzip": false,
+  "webengage.ruleData": {
+    "visitorBucket": 23,
+    "WebPushPermission": "default"
+  },
+  "webengage.customData": {
+    "visitorBucket": 23,
+    "WebPushPermission": "default"
+  },
+  "webengage.notification.defaultRender": false,
+  "webengage.notification.skipRules": true,
+  "webengage.tokens": {
+    "WebPushPermission": "default"
+  }
+}

@@ -1,40 +1,41 @@
-//webengage.feedback.options('alignment', 'left');
-webengage.onReady(function () {
-    setTimeout(function () {
-        var ele1 = document.getElementById("webklipper-publisher-widget-container-content-expand-collapse");
-        var custom_style1 = {
-            bottom: '50%',
-            right: '0px',
-            width: '30px',
-            height: '120px',
-            'background-color': 'rgb(198, 235, 241)',
-            'background-image': 'url(https://static-webengage-implementation.s3.amazonaws.com/candere/Feedback.svg)',
-            'background-position': '50% 100%',
-            'background-repeat': 'no-repeat',
-            border: '1px solid rgb(204, 204, 204)',
-            "border-radius": '0'
-        };
-        Object.assign(ele1.style, custom_style1);
 
-        var ele2 = document.querySelector("#webklipper-publisher-widget-container-content-expand-collapse > svg");
-        var custom_style2 = {
-            margin: "0px",
-            padding: "0px",
-            width: "20px",
-            height: "87px",
-            'background-position': '50% 100%',
-            'background-repeat': 'no-repeat',
-            overflow: "visible",
-            "box-sizing": "content-box"
-        };
-        Object.assign(ele2.style, custom_style2);
-
-        var ele3 = document.querySelector("#Page-1");
-        var custom_style3 = {
-            visibility: "hidden"
-        };
-        Object.assign(ele3.style, custom_style3);
-        
-    }, 10);
-
+webengage.survey.onSubmit(function (data) {
+    if ( data.surveyId == "~5g1cldm" || data.surveyId == "7djke51" || data.surveyId == "33l1272" || data.surveyId == "5g1cldo") {
+        var fName;
+        var phone;
+        var email;
+        console.log(data);
+        for (var i = 0; i < data.questionResponses.length; i++) {
+            if (
+                Object.prototype.toString.call(
+                    data.questionResponses[i].value.values
+                ) == "[object Object]"
+            ) {
+                for (var keys in data.questionResponses[i].value.values) {
+                    if (keys == "Name") {
+                        fName = data.questionResponses[i].value.values[keys];
+                    }
+                    if (keys == "Mobile Number") {
+                        phone = data.questionResponses[i].value.values[keys];
+                    }
+                    if (keys == "Email(Optional)") {
+                        email = data.questionResponses[i].value.values[keys];
+                    }
+                }
+            }
+        }
+        console.log("we_fName", fName);
+        console.log("we_phone", phone);
+        console.log("we_email", email);
+        if (webengage && webengage.state && typeof webengage.state.getForever === "function" &&
+            (webengage.state.getForever().cuid === null || webengage.state.getForever().cuid === undefined) &&
+            phone !== null
+        ) {
+            webengage.user.setAttribute({
+                "we_first_name": fName,
+                "we_phone": phone,
+                "we_email": email
+            });
+        }
+    }
 });
